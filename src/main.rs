@@ -87,9 +87,7 @@ enum Subcommands {
 fn main() {
     let args = Args::parse();
 
-    if args.command.is_none() {
-        println!("\n{WELCOME}\n");
-    }
+    if args.command.is_none() { println!("\n{WELCOME}\n"); }
 
     if !Path::new("info.toml").exists() {
         println!(
